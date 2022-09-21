@@ -1,0 +1,37 @@
+{
+    "data" : [
+        {
+        "id": 1,
+        "slug": "react-nextjs",
+        "title": "Learn Next.js in 4 hours",
+        "shortDescription": "Build a fullstack server rendered webapp with Next.js",
+        "description": "Next.js Firebase - The Full Course takes you from zero to a production-ready hybrid-rendered webapp. Learn how build a high-performance React app that features realtime data from Firebase and multiple server-side rendering paradigms with Next.js",
+        "image": "https://fireship.io/courses/react-next-firebase/img/featured.jpg",
+        "downloadLink" : "https://drive.google.com/file/d/1hH8x8Z5NQbDSXB5sHhw1Ytg2avTfQlZp/view?usp=sharing"
+        },
+        {
+        "id": 2,
+        "slug": "flutter-firebase",
+        "title": "Flutter firebase app from scratch",
+        "shortDescription": "Build a complex production-ready app from scratch with flutter and firebase",
+        "image": "https://fireship.io/courses/flutter-firebase/img/featured.jpg",
+        "description" : "This is a project-based course that will teach you how to build a multiple choice quiz app, inspired by apps like Duolingo and QuizUp. The app implements user authentication (Sign in with Google or Apple), tracks quiz progress in Firestore, uses dynamic animations, and shares data between screens.",
+        "downloadLink" : "https://drive.google.com/drive/u/0/mobile/folders/13Z-o2k7BLpfwE2fOmXY0MyfDE_6LYRBN/1eZXBKgU18ahLI7fu0CwabuH4taz26ThG?sort=13&direction=a"
+        
+        },
+        
+        {
+        "id": 3,
+        "slug": "stripe-js",
+        "title": "Stripe payments master course",
+        "shortDescription": "Build a fullstack payment solution with Node.js and React",
+        "description" : "The Stripe Payments JavaScript Course is a project-based guide to building fullstack payment solutions on the web with Node.js and React. The goal is to provide a solid foundation for app monetization 💸 by implementing common use-cases with Stripe APIs including Checkout, Payment Intents, and Billing",
+        "image": "https://fireship.io/courses/stripe-js/img/featured.jpg",
+        "downloadLink" : "https://drive.google.com/file/d/1waIQV3rLT881qDrdp5lEWr_ROJF3ljY5/view?usp=sharing"
+        }
+        
+        
+       
+    ]
+}
+
