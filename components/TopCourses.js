@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getServerSideProps } from "../pages/course/[course]";
 import CourseCard from "./CourseCard";
 
-function LatestUploaded({ title, description, categoryId }) {
+function TopCourses({ title, description, categoryId }) {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
     fetch(`/api/courses?categoryId=${categoryId}`)
@@ -22,7 +22,7 @@ function LatestUploaded({ title, description, categoryId }) {
           {description}
         </div>
       </div>
-      <div className="md:mx-3 flex flex-row overflow-x-auto rounded-sm p-1 ">
+      <div className="md:mx-3 flex flex-row overflow-x-scroll rounded-sm p-1 scrollbar-thin scrollbar-track-gray-400/30 scrollbar-thumb-purple-700/80 ">
         {courses &&
           courses.map((course) => (
             <CourseCard
@@ -38,4 +38,4 @@ function LatestUploaded({ title, description, categoryId }) {
   );
 }
 
-export default LatestUploaded;
+export default TopCourses;
