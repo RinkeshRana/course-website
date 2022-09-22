@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { getServerSideProps } from "../pages/course/[course]";
 import CourseCard from "./CourseCard";
 
 function TopCourses({ title, description, categoryId }) {

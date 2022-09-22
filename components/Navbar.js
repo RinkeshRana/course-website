@@ -1,10 +1,57 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function NavBar() {
   const router = useRouter();
+
+  const [searchInput, setSearchInput] = useState("");
+  const [searchData, setSearchData] = useState();
+
+  useEffect(() => {
+    const delayDebounceFn = setTimeout(() => {
+      if (searchInput.length > 0) {
+        console.log(searchInput);
+        fetch(`/api/searchCourse?course=${searchInput}`)
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            setSearchData(data);
+          });
+      }
+    }, 1000);
+
+    return () => clearTimeout(delayDebounceFn);
+  }, [searchInput]);
+
   return (
     <div className="relative">
+      {searchData && (
+        <div
+          className="absolute top-16 right-44 bg-gray-900 dark:bg-white shadow-lg rounded-md w-1/5
+        + z-50"
+        >
+          <div className="p-2">
+            {searchData.map((course) => (
+              <div
+                key={course.slug}
+                className="flex flex-row items-center space-x-2 p-2 cursor-pointer dark:hover:bg-gray-200 hover:bg-gray-800 rounded-md"
+                onClick={() => {
+                  router.push(`/course/${course.slug}`);
+                  setSearchInput("");
+                  setSearchData(null);
+                }}
+              >
+                <div className="flex flex-col">
+                  <div className="dark:text-gray-900 text-gray-100 font-semibold">
+                    {course.title}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 shadow-md">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
           <a onClick={() => router.push("/")} className="flex items-center">
@@ -57,6 +104,8 @@ function NavBar() {
                 id="search-navbar"
                 className="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Try searching a course..."
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
               />
             </div>
             <button
@@ -107,6 +156,8 @@ function NavBar() {
                 id="search-navbar"
                 className="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Search..."
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
               />
             </div>
             <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
