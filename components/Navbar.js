@@ -7,7 +7,7 @@ function NavBar() {
     <div className="relative">
       <div className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 shadow-md">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="https://flowbite.com/" className="flex items-center">
+          <a onClick={() => router.push("/")} className="flex items-center">
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white uppercase tracking-wider">
               Courses Duniya
             </span>

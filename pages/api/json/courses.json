@@ -1,37 +1,231 @@
 {
-    "data" : [
-        {
-        "id": 1,
-        "slug": "react-nextjs",
-        "title": "Learn Next.js in 4 hours",
-        "shortDescription": "Build a fullstack server rendered webapp with Next.js",
-        "description": "Next.js Firebase - The Full Course takes you from zero to a production-ready hybrid-rendered webapp. Learn how build a high-performance React app that features realtime data from Firebase and multiple server-side rendering paradigms with Next.js",
-        "image": "https://fireship.io/courses/react-next-firebase/img/featured.jpg",
-        "downloadLink" : "https://drive.google.com/file/d/1hH8x8Z5NQbDSXB5sHhw1Ytg2avTfQlZp/view?usp=sharing"
-        },
-        {
-        "id": 2,
-        "slug": "flutter-firebase",
-        "title": "Flutter firebase app from scratch",
-        "shortDescription": "Build a complex production-ready app from scratch with flutter and firebase",
-        "image": "https://fireship.io/courses/flutter-firebase/img/featured.jpg",
-        "description" : "This is a project-based course that will teach you how to build a multiple choice quiz app, inspired by apps like Duolingo and QuizUp. The app implements user authentication (Sign in with Google or Apple), tracks quiz progress in Firestore, uses dynamic animations, and shares data between screens.",
-        "downloadLink" : "https://drive.google.com/drive/u/0/mobile/folders/13Z-o2k7BLpfwE2fOmXY0MyfDE_6LYRBN/1eZXBKgU18ahLI7fu0CwabuH4taz26ThG?sort=13&direction=a"
-        
-        },
-        
-        {
-        "id": 3,
-        "slug": "stripe-js",
-        "title": "Stripe payments master course",
-        "shortDescription": "Build a fullstack payment solution with Node.js and React",
-        "description" : "The Stripe Payments JavaScript Course is a project-based guide to building fullstack payment solutions on the web with Node.js and React. The goal is to provide a solid foundation for app monetization 💸 by implementing common use-cases with Stripe APIs including Checkout, Payment Intents, and Billing",
-        "image": "https://fireship.io/courses/stripe-js/img/featured.jpg",
-        "downloadLink" : "https://drive.google.com/file/d/1waIQV3rLT881qDrdp5lEWr_ROJF3ljY5/view?usp=sharing"
-        }
-        
-        
-       
-    ]
+  "data": [
+    {
+      "id": 1,
+      "slug": "react-nextjs",
+      "title": "Learn Next.js in 4 hours",
+      "shortDescription": "Build a fullstack server rendered webapp with Next.js",
+      "description": "Next.js Firebase - The Full Course takes you from zero to a production-ready hybrid-rendered webapp. Learn how build a high-performance React app that features realtime data from Firebase and multiple server-side rendering paradigms with Next.js",
+      "image": "https://fireship.io/courses/react-next-firebase/img/featured.jpg",
+      "downloadLink": "https://drive.google.com/file/d/1hH8x8Z5NQbDSXB5sHhw1Ytg2avTfQlZp/view?usp=sharing",
+      "learningPoints": [
+        "Custom Firebase usernames",
+        "Bot-friendly content (SEO)",
+        "Advanced SSR, SSG, and ISR techniques",
+        "Firestore realtime CRUD and data modeling",
+        "Reactive forms with react-hook-form",
+        "Image file uploads",
+        "Realtime hearts",
+        "Security & Deployment"
+      ],
+      "categoryId": "0"
+    },
+    {
+      "id": 2,
+      "slug": "flutter-firebase",
+      "title": "Flutter firebase app from scratch",
+      "shortDescription": "Build a complex production-ready app from scratch with flutter and firebase",
+      "image": "https://fireship.io/courses/flutter-firebase/img/featured.jpg",
+      "description": "This is a project-based course that will teach you how to build a multiple choice quiz app, inspired by apps like Duolingo and QuizUp. The app implements user authentication (Sign in with Google or Apple), tracks quiz progress in Firestore, uses dynamic animations, and shares data between screens.",
+      "downloadLink": "https://drive.google.com/drive/u/0/mobile/folders/13Z-o2k7BLpfwE2fOmXY0MyfDE_6LYRBN/1eZXBKgU18ahLI7fu0CwabuH4taz26ThG?sort=13&direction=a",
+      "learningPoints": [
+        "Build a complete Flutter app with Firebase",
+        "Master the most common Flutter UI widgets",
+        "User Authentication (Apple, Google, Anonymous)",
+        " State Management with Provider",
+        "Model relational Firestore data",
+        "Animation for realtime data streams",
+        " Organize large Flutter projects",
+        "Convert Firestore data to Dart Classes with JSON Serializable",
+        "Null safety",
+        "Deploy to the Apple App Store and Google Play"
+      ],
+      "categoryId": "0"
+    },
+    {
+      "id": 3,
+      "slug": "vs-code-magic-tricks",
+      "title": "VS Code Magic Tricks",
+      "shortDescription": "Write better code faster by leveling up your VS Code editing skills",
+      "image": "https://fireship.io/courses/vscode-tricks/img/featured.jpg",
+      "description": "The VS Code Magic Tricks course will teach you how to write code faster and make you a happier developer. It demonstrates dozens of small optimizations that result in long-term productivity gains as a programmer.",
+      "downloadLink": "https://drive.google.com/drive/folders/12A-ROV4Uic9TZ_Yw8q47xsA11FwIfmnD",
+      "categoryId": "0",
+      "learningPoints": [
+        "Write better code faster",
+        "Edit code in rhythm with your keyboard",
+        "Tweak settings for optimal productivity",
+        "Automate repetitive tasks",
+        "Avoid common pitfalls and bottlenecks",
+        "Leverage powerful extensions",
+        "Advanced IDE features like Docker & remote repos",
+        "Advanced IDE features like Docker & remote repos"
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "web-devlopment-angela-yu",
+      "title": "The complete web development bootcamp",
+      "shortDescription": "Become a Full-Stack Web Developer with just ONE course. HTML, CSS, Javascript, Node, React, MongoDB, Web3 and DApps",
+      "image": "https://miro.medium.com/max/750/0*QmxDMtQShSHGzC6v.jpg",
+      "description": "At 65+ hours, this Web Development course is without a doubt the most comprehensive web development course available online. Even if you have zero programming experience, this course will take you from beginner to mastery.",
+      "downloadLink": "https://mega.nz/folder/3WhSkBjJ#YSDBnDegckd9-xSQ04W0qA/folder/DWpi0DBS",
+      "categoryId": "1",
+      "learningPoints": [
+        "Build fully-fledged websites and web apps for your startup or business.",
+        "Master frontend development with React",
+        "Learn professional developer best practices.",
+        "After the course you will be able to build ANY website you want.",
+        "Work as a freelance web developer.",
+        "Master backend development with Node"
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "stripe-js",
+      "title": "Stripe payments master course",
+      "shortDescription": "Build a fullstack payment solution with Node.js and React",
+      "description": "The Stripe Payments JavaScript Course is a project-based guide to building fullstack payment solutions on the web with Node.js and React. The goal is to provide a solid foundation for app monetization 💸 by implementing common use-cases with Stripe APIs including Checkout, Payment Intents, and Billing",
+      "image": "https://fireship.io/courses/stripe-js/img/featured.jpg",
+      "downloadLink": "https://drive.google.com/file/d/1waIQV3rLT881qDrdp5lEWr_ROJF3ljY5/view?usp=sharing",
+      "categoryId": "0",
+      "learningPoints": [
+        "Node.js Server with Express & TypeScript",
+        "React frontend UI (functional components, hooks, & suspense)",
+        "3D Secure payment handling",
+        "Manage Stripe customers and save cards",
+        "Setup subscriptions, invoices, and recurring payments",
+        "Securely listen to events from Stripe via webhooks",
+        "Dockerize and deploy to Google Cloud Run"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "python-angela-yu",
+      "title": "The Complete Python Pro Bootcamp",
+      "shortDescription": "Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
+      "description": "At 60+ hours, this Python course is without a doubt the most comprehensive Python course available anywhere online. Even if you have zero programming experience, this course will take you from beginner to professional.",
+      "image": "https://getyourstudy.com/img/courses/2bed6b968d421e69613c0b1db932f774.jpg",
+      "downloadLink": "https://mega.nz/folder/3WhSkBjJ#YSDBnDegckd9-xSQ04W0qA/folder/bPg0zBrL",
+      "categoryId": "1",
+      "learningPoints": [
+        "You will be able to program in Python professionally",
+        "Create a portfolio of 100 Python projects to apply for developer jobs",
+        "Be able to use Python for data science and machine learning",
+        "Build GUIs and Desktop applications with Python",
+        "Be able to build fully fledged websites and web apps with Python",
+        "Build games like Blackjack, Pong and Snake using Python"
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "flutter-angela-yu",
+      "title": "Flutter Development Bootcamp with Dart",
+      "shortDescription": "Officially created in collaboration with the Google Flutter team.",
+      "description": "We built this course over months, perfecting the curriculum together with the Flutter team to teach you Flutter from scratch and make you into  a skilled Flutter developer with a strong portfolio of beautiful Flutter apps.Our complete Flutter development bootcamp teaches you how to code using Dart and build beautiful, fast, native-quality iOS and Android apps. Even if you have ZERO programming experience.",
+      "image": "https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2020/04/the-complete-2020-flutter-development-bootcamp-with-dart-free-download.png",
+      "downloadLink": "https://mega.nz/folder/3WhSkBjJ#YSDBnDegckd9-xSQ04W0qA/folder/7ChGCDqA",
+      "categoryId": "1",
+      "learningPoints": [
+        "Build beautiful, native-quality iOS and Android apps with Flutter",
+        "Learn how to code using Dart",
+        "Build a portfolio of 20+ apps to apply for Flutter jobs",
+        "Learn how to use Firebase for Flutter apps",
+        "Learn how to use Provider for state management",
+        "Learn how to use the BLoC pattern for state management",
+        "Learn how to use the Riverpod state management library",
+        "Learn how to use the GetX state management library"
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "mosh-all-in-one",
+      "title": "Mosh hamedani all courses",
+      "shortDescription": "Boost your career with UNLIMITED ACCESS to ALL existing and future courses",
+      "description": "Land your coding dream job, you need to be skilled in as many areas of coding as you can. You need to know various programming languages, data structures, design patterns, front-end/back-end libraries, databases, etc.",
+      "image": "https://programmingwithmosh.com/wp-content/uploads/2019/02/mosh-home.jpg",
+      "downloadLink": "https://mega.nz/folder/4UpgUCpY#Yjb89ZY_PrisXWlP74u5uA",
+      "categoryId": "1",
+      "learningPoints": ["Not available."]
+    },
+    {
+      "id": 9,
+      "slug": "the-redteam-blueprint",
+      "title": "The RedTeam Blueprint - A Unique Guide To Ethical Hacking",
+      "shortDescription": "Boost your career with UNLIMITED ACCESS to ALL existing and future courses",
+      "description": "Information Security is an ever growing field and with new jobs opening everyday but not enough professionals to fill them is creating a massive demand. With the RedTeam Blueprint you will be able to fill this gap! As a RedTeam Nation Student you will have the skills required to not only go into Ethical Hacking but into any field of Information Security available!",
+      "image": "https://img-c.udemycdn.com/course/480x270/2361494_8168.jpg",
+      "downloadLink": "https://drive.google.com/drive/u/0/folders/1B_beUbV_94cOCusjRVzLR9dWNdNXDV4h",
+      "categoryId": "2",
+      "learningPoints": [
+        "Full Guide on Job Hunting in Silicon Valley",
+        "The ability to creatively deploy persistence and backdoor binaries",
+        "Post Exploitation Techniques",
+        "Passive and Active Reconnaissance tools and Techniques",
+        "Building out Finding Reports and designing them for the right audience",
+        "Building, Managing and Attacking an Enterprise Active Directory Infrastructure",
+        "Password Cracking"
+      ]
+    },
+    {
+      "id": 10,
+      "slug": "intermediate-level-english",
+      "title": "B1-B2 Intermediate Level ENGLISH Course | Complete Grammar",
+      "shortDescription": "B1 - B2 Intermediate Level English Course for learners who want to improve their Basic English Grammar and Structures.",
+      "description": "You will learn all the B1 - B2 Intermediate Level English sentence structures and their grammatical usage in different contexts and with rich examples in our course. You will also learn B1-B2 level vocabulary, and you will be an absolute B2 level upon completing our course.",
+      "image": "https://img-c.udemycdn.com/course/480x270/4607978_825f.jpg",
+      "downloadLink": "https://drive.google.com/drive/u/0/folders/1B_beUbV_94cOCusjRVzLR9dWNdNXDV4h",
+      "categoryId": "2",
+      "learningPoints": [
+        "You will be able to speak English fluently",
+        "You will be able to write English fluently",
+        "You will be able to read English fluently",
+        "You will be able to understand English fluently",
+        "You will be able to use English in your daily life",
+        "You will be able to use English in your professional life"
+      ]
+    },
+    {
+      "id": 11,
+      "slug": "graphic-design-bootcamp",
+      "title": "Graphic Design Bootcamp: Advanced Training Using Adobe CC",
+      "shortDescription": "Project-Based Learning For Intermediate Designers: Use Photoshop, Lightroom, and Other Adobe Creative Cloud Programs",
+      "description": "This course is for anyone who is interested in becoming a graphic designer and is especially geared towards intermediate students who have already completed Derrick's Graphic Design Bootcamp: Photoshop, Illustrator, and InDesign Course.",
+      "image": "https://img-c.udemycdn.com/course/480x270/1746704_3cf0_7.jpg",
+      "downloadLink": "https://mega.nz/folder/93RXwAbS#k7fE2xhJx5tktnJy6g-5Fw",
+      "categoryId": "2",
+      "learningPoints": [
+        "Learn how to use Adobe Photoshop, Illustrator, InDesign, and Lightroom",
+        "Learn how to use Adobe XD, After Effects, and Premiere Pro",
+        "Learn how to use Adobe Spark, Adobe Portfolio, and Adobe Dimension",
+        "Learn how to use Adobe Fresco, Adobe Character Animator, and Adobe Animate",
+        "Learn how to use Adobe Audition, Adobe Premiere Rush, and Adobe Premiere Pro",
+        "Learn how to use Adobe Photoshop, Illustrator, InDesign, and Lightroom",
+        "Learn how to use Adobe XD, After Effects, and Premiere Pro",
+        "Learn how to use Adobe Spark, Adobe Portfolio, and Adobe Dimension",
+        "Learn how to use Adobe Fresco, Adobe Character Animator, and Adobe Animate",
+        "Learn how to use Adobe Audition, Adobe Premiere Rush, and Adobe Premiere Pro"
+      ]
+    },
+    {
+      "id": 12,
+      "slug": "complete-digital-marketing-course",
+      "title": "The Complete Digital Marketing Course - 12 Courses in 1",
+      "shortDescription": "Master Digital Marketing Strategy, Social Media Marketing, SEO, YouTube, Email, Facebook Marketing, Analytics & More!",
+      "description": "With over 20 hours of training, quizzes and practical steps you can follow - this is one of the most comprehensive digital marketing courses available. We'll cover SEO, YouTube Marketing, Facebook Marketing, Google Adwords, Google Analytics and more!",
+      "image": "https://img-c.udemycdn.com/course/480x270/914296_3670_8.jpg",
+      "downloadLink": "https://mega.nz/folder/beIy3ASK#do_FeylZgtxvbOSmrKfyWw",
+      "categoryId": "2",
+      "learningPoints": [
+        "Learn how to use Google Analytics",
+        "Learn how to use Google Adwords",
+        "Learn how to use Facebook Marketing",
+        "Learn how to use YouTube Marketing",
+        "Learn how to use Email Marketing",
+        "Learn how to use Social Media Marketing",
+        "Learn how to use SEO",
+        "Learn how to use Digital Marketing Strategy"
+      ]
+    }
+  ]
 }
-

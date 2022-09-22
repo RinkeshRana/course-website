@@ -7,8 +7,19 @@ export default function handler(req, res) {
       res.status(200).json("error");
       return;
     } else {
-      res.status(200).json(JSON.parse(data));
+      let coursesData = JSON.parse(data);
+      let courses = [];
+      if (req.query.categoryId) {
+        for (const item of coursesData.data) {
+          if (item.categoryId === req.query.categoryId) {
+            courses.push(item);
+          }
+        }
+      } else {
+        courses = coursesData;
+      }
+      res.status(200).json(courses);
+      return;
     }
-    res.status(200).json(JSON.parse(data));
   });
 }

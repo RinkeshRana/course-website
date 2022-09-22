@@ -15,7 +15,7 @@ function course({ course }) {
         description={course.description}
       />
       <div className="text-white text-xl md:text-3xl  font-bold tracking-widest mt-5 p-2 border-b border-dashed border-gray-600">
-        <CourseDetails />
+        <CourseDetails learningPoints={course.learningPoints} />
       </div>
 
       {/* Download section */}

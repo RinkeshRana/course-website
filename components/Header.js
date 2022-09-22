@@ -5,11 +5,11 @@ function Header() {
   return (
     <div className=" h-[630px] bg-white dark:bg-gray-900 md:flex border-b border-dashed border-gray-600">
       <div className="w-screen md:w-1/2 flex-col ">
-        <div className=" p-12 md:ml-40    h-3/4 flex flex-col justify-evenly md:items-start">
-          <h3 className="text-white text-2xl md:text-3xl uppercase tracking-widest font-bold ">
-            Explore Mostly{" "}
+        <div className=" p-6 md:p-10 md:ml-40 h-3/4 flex flex-col justify-evenly md:items-start">
+          <h3 className="text-white text-2xl md:text-3xl uppercase tracking-widest font-bold leading-10">
+            Explore the{" "}
             <span className=" font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-red-400 to-orange-400">
-              Viewed
+              best
             </span>
           </h3>
 
@@ -25,7 +25,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="md:w-1/2 mx-4">
+      <div className="md:w-1/2 mx-4 my-auto">
         <SiderImage />
       </div>
     </div>

@@ -9,19 +9,18 @@ function CourseCard({ slug, title, shortDescription, image }) {
   };
   return (
     <div className="text-white bg-gray-800 min-w-[300px] max-w-[500px]  sm:min-w-[500px] md:p-4 p-1 m-2 hover:shadow-lg ">
-      <div>
-        <Image
-          src={image}
-          alt="Picture of the author"
-          width={500}
-          height={270}
+      <div className="">
+        <img
+          src={`${image}`}
+          alt="Image not available"
           className="rounded shadow-sm"
+          loading="lazy"
         />
-        <h2 className="md:text-xl text-lg font-bold uppercase text-center tracking-wide ">
+        <h2 className="md:text-xl text-lg font-bold uppercase text-center tracking-wide line-clamp-2">
           {title}
         </h2>
         <div className="flex-col flex  justify-evenly">
-          <h4 className="text-center text-gray-400 md:text-lg mt-2 text-sm flex-1 truncate">
+          <h4 className="text-center text-gray-400 md:text-lg mt-2 text-sm flex-1 line-clamp-2">
             {shortDescription}
           </h4>
           <button

@@ -14,7 +14,29 @@ export default function Home() {
         <Header />
       </section>
       <section>
-        <LatestUploaded />
+        <LatestUploaded
+          title={"Top Courses"}
+          description={"Visit top courses avaliable in our platform"}
+          categoryId={"0"}
+        />
+      </section>
+      <section>
+        <LatestUploaded
+          title={"Learn to code"}
+          description={
+            "Coding tells a machine which actions to perform and how to complete tasks. Programming languages provide the rules for building websites, apps, etc."
+          }
+          categoryId={"1"}
+        />
+      </section>
+      <section>
+        <LatestUploaded
+          title={"Randomly Uploaded"}
+          description={
+            "Courses which are randomly uploaded on the platform. You can also contribute to the platform by uploading your own courses."
+          }
+          categoryId={"2"}
+        />
       </section>
     </div>
   );

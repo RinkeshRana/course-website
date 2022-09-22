@@ -2,31 +2,29 @@ import React, { useEffect, useState } from "react";
 import { getServerSideProps } from "../pages/course/[course]";
 import CourseCard from "./CourseCard";
 
-function LatestUploaded() {
+function LatestUploaded({ title, description, categoryId }) {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    fetch("/api/courses")
+    fetch(`/api/courses?categoryId=${categoryId}`)
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);
-        console.log(courses);
+        console.log(data);
       });
   }, []);
-  console.log(courses.data);
   return (
-    <div className="bg-white dark:bg-gray-900  h-[630px]">
+    <div className="bg-white dark:bg-gray-900  h-[630px] border-b border-gray-600 border-dotted">
       <div className="p-4">
         <div className="text-center text-white font-bold text-2xl uppercase tracking-widest mt-5">
-          Recently Uploaded
+          {title}
         </div>
-        <div className="text-gray-400 font-semibold md:text-center text-justify uppercase mt-5">
-          Check out the latest courses uploaded on the platform. You can also
-          contribute to the platform by uploading your own courses.
+        <div className="text-gray-400 font-semibold  text-center uppercase mt-5">
+          {description}
         </div>
       </div>
-      <div className="md:mx-3 flex flex-row overflow-x-auto rounded-sm p-1 2xl:justify-center">
-        {courses.data &&
-          courses.data.map((course) => (
+      <div className="md:mx-3 flex flex-row overflow-x-auto rounded-sm p-1 ">
+        {courses &&
+          courses.map((course) => (
             <CourseCard
               key={course.id}
               slug={course.slug}
