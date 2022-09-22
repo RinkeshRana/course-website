@@ -32,7 +32,7 @@ export default course;
 export async function getServerSideProps(context) {
   const courseName = context.query.course;
   const res = await fetch(
-    `http://localhost:3000/api/getCourse?slug=${courseName}`
+    `http://${context.req.headers.host}/api/getCourse?slug=${courseName}`
   );
   const course = await res.json();
   return {
