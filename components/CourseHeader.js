@@ -12,9 +12,9 @@ function CourseHeader({ title, description, image }) {
           <img src={image} alt="NextJS Firebase" width="100%" height="50%" />
         </div>
         <div>
-          <h4 className="text-gray-400 md:text-3xl  p-5 tracking-wide">
+          <h6 className="text-gray-400 md:text-3xl  p-5 tracking-wide">
             {description}
-          </h4>
+          </h6>
         </div>
       </div>
     </div>

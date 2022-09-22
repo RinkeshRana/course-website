@@ -8,7 +8,9 @@ function CourseDownload({ downloadLink }) {
         📁 Download the course
       </h6>
       <div className="text-light text-gray-400 text-sm md:text-xl ml-4 mt-8 leading-loose hover:text-white hover:underline w-fit">
-        <Link href={downloadLink}>🔘 Download Link</Link>
+        <a target={"_blank"} rel="noopener noreferrer" href={downloadLink}>
+          🔘 Download Link
+        </a>
       </div>
     </div>
   );

@@ -1,7 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Head from "next/head";
 import React from "react";
-import CourseCard from "../../components/CourseCard";
 import CourseDetails from "../../components/CourseDetails";
 import CourseDownload from "../../components/CourseDownload";
 import CourseHeader from "../../components/CourseHeader";
@@ -9,6 +7,11 @@ import CourseHeader from "../../components/CourseHeader";
 function course({ course }) {
   return (
     <div className=" bg-white dark:bg-gray-900 p-3">
+      <Head>
+        <title>{course.title}</title>
+        <meta name="description" content={course.shortDescription} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <CourseHeader
         title={course.title}
         image={course.image}
