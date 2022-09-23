@@ -1,4 +1,4 @@
-import courses from "../../middleware/models/courses";
+import Courses from "../../models/Courses";
 import connectDB from "../../middleware/mongoose";
 
 const handler = async (req, res) => {
@@ -56,7 +56,7 @@ const handler = async (req, res) => {
     });
   }
   try {
-    const newCourse = await courses.create(course);
+    const newCourse = await Courses.create(course);
     res.status(201).json(newCourse);
   } catch (err) {
     if (err.code === 11000) {

@@ -1,8 +1,8 @@
-import courses from "../../middleware/models/courses";
+import Courses from "../../models/Courses";
 import connectDB from "../../middleware/mongoose";
 
 const handler = async (req, res) => {
-  let course = await courses.find();
+  let course = await Courses.find();
 
   if (req.query.slug) {
     for (const item of course) {
