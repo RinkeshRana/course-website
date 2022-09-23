@@ -1,5 +1,5 @@
 import Courses from "../../models/Courses";
-import connectDB from "../../middleware/mongoose";
+import connectDB from "../../lib/mongoose";
 
 const handler = async (req, res) => {
   let course = await Courses.find();

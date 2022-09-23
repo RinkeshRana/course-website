@@ -1,5 +1,5 @@
 import Courses from "../../models/Courses";
-import { connectToDatabase } from "../../lib/mongodb";
+import connectDB from "../../lib/mongoose";
 
 const handler = async (req, res) => {
   if (req.method != "POST") {
@@ -67,4 +67,4 @@ const handler = async (req, res) => {
   }
 };
 
-export default connectToDatabase(handler);
+export default connectDB(handler);
