@@ -10,6 +10,7 @@ function SiderImage() {
         alt="Thumbnail not available"
         width={500}
         height={450}
+        loading="lazy"
         className="rounded shadow-sm"
       />
       {/* </div> */}

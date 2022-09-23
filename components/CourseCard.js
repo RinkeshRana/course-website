@@ -8,14 +8,16 @@ function CourseCard({ slug, title, shortDescription, image }) {
     router.push(`/course/${slug}`);
   };
   return (
-    <div className="text-white bg-gray-800 min-w-[300px] max-w-[500px]  sm:min-w-[500px] md:p-4 p-1 m-2 hover:shadow-lg ">
-      <div className="">
-        <img
-          src={`${image}`}
-          alt="Image not available"
-          className="rounded shadow-sm"
-          loading="lazy"
-        />
+    <div className="text-white bg-gray-800 min-w-[300px] max-w-[500px]  sm:max-w-[415px] md:p-4 p-1 m-2 hover:shadow-lg ">
+      <div className="flex flex-col items-center justify-center">
+        <div className="max-w-sm max-h-sm">
+          <img
+            src={`${image}`}
+            alt="Image not available"
+            className="rounded shadow-sm "
+            loading="lazy"
+          />
+        </div>
         <h2 className="md:text-xl text-lg font-bold uppercase text-center tracking-wide line-clamp-2">
           {title}
         </h2>

@@ -1,4 +1,4 @@
-import courses from "../../models/courses";
+import courses from "../../middleware/models/courses";
 import connectDB from "../../middleware/mongoose";
 
 const handler = async (req, res) => {
