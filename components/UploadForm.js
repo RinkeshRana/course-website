@@ -56,7 +56,7 @@ function UploadForm() {
   };
 
   return (
-    <div className=" bg-gray-900">
+    <div className=" dark:bg-gray-900">
       <div className="flex flex-col items-center justify-center min-h-screen">
         <div className="flex flex-col items-center justify-center rounded-lg p-3 md:p-16 w-full md:w-min ">
           <h1 className="text-xl sm:text-2xl font-bold mb-10 uppercase tracking-widest dark:text-white ">
@@ -70,7 +70,7 @@ function UploadForm() {
               Title
             </label>
             <input
-              className="outline-none bg-slate-400/10 rounded-sm border-b px-1 md:px-6 py-2 md:py-3 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-green-500/40 focus:text-green-300/40 hover:border-green-500/40 md:md:w-96 w-full"
+              className="outline-none  bg-slate-500/10 dark:bg-slate-400/10 rounded-sm border-b px-1 md:px-6 py-2 md:py-3 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-green-500/40 dark:focus:text-green-300/40 hover:border-green-500/40 md:md:w-96 w-full"
               type="text"
               id="title"
               placeholder="Title of the course"
@@ -86,7 +86,7 @@ function UploadForm() {
               Description
             </label>
             <textarea
-              className="outline-none bg-slate-400/10 rounded-sm border-b px-1 md:px-6 py-2 md:py-3 border-[#242424] text-gray-500 placeholder-gray-500  focus:border-green-500/40 focus:text-green-300/40 hover:border-green-500/40 md:w-96"
+              className="outline-none bg-slate-500/10 dark:bg-slate-400/10 rounded-sm border-b px-1 md:px-6 py-2 md:py-3 border-[#242424] text-gray-500 placeholder-gray-500  focus:border-green-500/40 dark:focus:text-green-300/40 hover:border-green-500/40 md:w-96"
               type="text"
               id="description"
               placeholder="Description of the course"
@@ -126,7 +126,7 @@ function UploadForm() {
               [...Array(objectives)].map((e, i) => (
                 <input
                   key={i}
-                  className="outline-none bg-slate-400/10 rounded-sm border-b px-1 md:px-6 py-2 md:py-3 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-green-500/40 focus:text-green-300/40 hover:border-green-500/40 md:md:w-96 w-full my-1"
+                  className="outline-none bg-slate-500/10 dark:bg-slate-400/10 rounded-sm border-b px-1 md:px-6 py-2 md:py-3 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-green-500/40 dark:focus:text-green-300/40 hover:border-green-500/40 md:md:w-96 w-full my-1"
                   type="text"
                   id="title"
                   placeholder="Learning Objective"
@@ -148,7 +148,7 @@ function UploadForm() {
               Course Image Link (1280x720)
             </label>
             <input
-              className="outline-none bg-slate-400/10 rounded-sm border-b px-1 md:px-6 py-2 md:py-3 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-green-500/40 focus:text-green-300/40 hover:border-green-500/40 md:w-96"
+              className="outline-none bg-slate-500/10 dark:bg-slate-400/10 rounded-sm border-b px-1 md:px-6 py-2 md:py-3 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-green-500/40 dark:focus:text-green-300/40 hover:border-green-500/40 md:w-96"
               type="text"
               id="title"
               placeholder="https://example.com/image.png"
@@ -164,7 +164,7 @@ function UploadForm() {
               Course Download Link
             </label>
             <input
-              className="outline-none bg-slate-400/10 rounded-sm border-b px-1 md:px-6 py-2 md:py-3 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-green-500/40 focus:text-green-300/40 hover:border-green-500/40 md:w-96"
+              className="outline-none bg-slate-500/10 dark:bg-slate-400/10 rounded-sm border-b px-1 md:px-6 py-2 md:py-3 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-green-500/40 dark:focus:text-green-300/40 hover:border-green-500/40 md:w-96"
               type="text"
               id="title"
               placeholder="https://example.com/marketing.zip"

@@ -1,21 +1,30 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function NavBar() {
   const router = useRouter();
+  const searchInputRef = useRef();
 
   const [searchInput, setSearchInput] = useState("");
   const [searchData, setSearchData] = useState();
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const switchSearch = () => {
+    setNavbarOpen(true);
+    searchInputRef.current.focus();
+  };
+
+  const switchNavbar = () => {
+    setNavbarOpen(!navbarOpen);
+  };
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       if (searchInput.length > 0) {
-        console.log(searchInput);
         fetch(`/api/get-course?search=${searchInput}`)
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             setSearchData(data);
           });
       }
@@ -28,13 +37,13 @@ function NavBar() {
     <div>
       <div className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 shadow-md">
         <div className="container flex flex-wrap justify-between items-center mx-auto relative">
-          {searchData && (
-            <div className="absolute top-14 dark:bg-gray-800 bg-white shadow-lg rounded-md w-1/3 z-50 right-0 border-2 border-gray-700 ">
+          {searchData?.length >= 1 && (
+            <div className="absolute top-24 md:top-14 dark:bg-gray-800 bg-white shadow-lg rounded-md w-full md:w-1/3 z-50 md:right-0 border-2 border-gray-700 ">
               <div className="p-2">
                 {searchData.map((course) => (
                   <div
                     key={course.slug}
-                    className="flex flex-row items-center space-x-2 p-2 cursor-pointer hover:bg-gray-200 duration-150 hover:scale-105 dark:hover:bg-gray-700 rounded-md"
+                    className="flex flex-row items-center space-x-2 p-1 md:p-2 cursor-pointer hover:bg-gray-200 duration-150 hover:scale-105 dark:hover:bg-gray-700 rounded-md"
                     onClick={() => {
                       router.push(`/course/${course.slug}`);
                       setSearchInput("");
@@ -70,6 +79,7 @@ function NavBar() {
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
+                onClick={switchSearch}
               >
                 <path
                   fillRule="evenodd"
@@ -119,6 +129,7 @@ function NavBar() {
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
+                onClick={switchNavbar}
               >
                 <path
                   fillRule="evenodd"
@@ -129,8 +140,10 @@ function NavBar() {
             </button>
           </div>
           <div
-            className="block justify-between items-center w-full md:flex md:w-auto md:order-1"
-            id="navbar-search"
+            className={` justify-between items-center w-full md:flex md:w-auto md:order-1"
+            id="navbar-search
+            ${navbarOpen ? "block" : "hidden"}
+            `}
           >
             <div className="relative mt-3 md:hidden">
               <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -154,6 +167,7 @@ function NavBar() {
                 className="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Search..."
                 value={searchInput}
+                ref={searchInputRef}
                 onChange={(e) => setSearchInput(e.target.value)}
               />
             </div>
@@ -161,9 +175,9 @@ function NavBar() {
               <li>
                 <Link href="/">
                   <span
-                    className={`block py-2 pr-4 pl-3  bg-blue-700 rounded md:bg-transparent  md:p-0 tracking-wider uppercase cursor-pointer ${
+                    className={`block py-2 pr-4 pl-3 rounded md:bg-transparent  md:p-0 tracking-wider uppercase cursor-pointer ${
                       router.pathname === "/"
-                        ? "dark:text-white text-white md:text-blue-700 "
+                        ? "dark:text-white text-white md:text-blue-700 bg-blue-700"
                         : "text-gray-900 dark:text-gray-500"
                     }`}
                     aria-current="page"
@@ -175,13 +189,11 @@ function NavBar() {
               <li>
                 <Link href="/course">
                   <span
-                    className={`block py-2 pr-4 pl-3 text-gray-700 rounded  md:p-0 dark:text-gray-400 dark:hover:bg-gray-70 md:dark:hover:bg-transparent tracking-wider uppercase dark:border-gray-700 cursor-pointer
-                    ${
+                    className={`block py-2 pr-4 pl-3 rounded md:bg-transparent  md:p-0 tracking-wider uppercase cursor-pointer ${
                       router.pathname === "/course"
-                        ? " text-white md:text-blue-700 "
+                        ? "dark:text-white text-white md:text-blue-700 bg-blue-700"
                         : "text-gray-900 dark:text-gray-500"
-                    }
-                  `}
+                    }`}
                   >
                     All Courses
                   </span>
@@ -190,9 +202,9 @@ function NavBar() {
               <li>
                 <Link href="/upload">
                   <span
-                    className={`block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 tracking-wider uppercase dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer ${
+                    className={`block py-2 pr-4 pl-3 rounded md:bg-transparent  md:p-0 tracking-wider uppercase cursor-pointer ${
                       router.pathname === "/upload"
-                        ? "dark:text-white text-white md:text-blue-700 "
+                        ? "dark:text-white text-white md:text-blue-700 bg-blue-700"
                         : "text-gray-900 dark:text-gray-500"
                     }`}
                   >

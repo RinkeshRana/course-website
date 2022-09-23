@@ -5,14 +5,19 @@ function CourseHeader({ title, description, image }) {
   return (
     <div>
       <div className="flex flex-col items-center space-y-5 border-b border-dashed border-gray-600">
-        <h2 className="text-white text-2xl md:text-4xl text-center font-bold uppercase mt-16 tracking-widest">
+        <h2 className="dark:text-white text-2xl md:text-4xl text-center font-bold uppercase mt-16 tracking-widest">
           {title}
         </h2>
         <div className="mt-5 w-full md:w-1/2 rounded-md ">
-          <img src={image} alt="NextJS Firebase" width="100%" height="50%" />
+          <img
+            src={image}
+            alt="Image not available"
+            width="100%"
+            height="50%"
+          />
         </div>
         <div>
-          <h6 className="text-gray-400 md:text-3xl  p-5 tracking-wide">
+          <h6 className="dark:text-gray-400 md:text-3xl  p-5 tracking-wide">
             {description}
           </h6>
         </div>

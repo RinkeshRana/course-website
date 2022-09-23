@@ -8,7 +8,7 @@ function CourseCard({ slug, title, shortDescription, image }) {
     router.push(`/course/${slug}`);
   };
   return (
-    <div className="text-white bg-gray-800 min-w-[300px] max-w-[500px]  sm:max-w-[415px] md:p-4 p-1 m-2 hover:shadow-lg ">
+    <div className="text-white dark:bg-gray-800 min-w-[300px] max-w-[500px]  sm:max-w-[415px] md:p-4 p-1 m-2 shadow-lg bg-gray-800 ">
       <div className="flex flex-col items-center justify-center">
         <div className="max-w-sm max-h-sm">
           <img
@@ -26,7 +26,7 @@ function CourseCard({ slug, title, shortDescription, image }) {
             {shortDescription}
           </h4>
           <button
-            className="bg-green-600 w-full text-xs text-white font-bold py-2 rounded mt-4"
+            className="bg-green-600  w-full text-xs text-white font-bold py-2 rounded mt-4"
             onClick={openCourse}
           >
             Download
