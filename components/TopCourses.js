@@ -4,7 +4,7 @@ import CourseCard from "./CourseCard";
 function TopCourses({ title, description, categoryId }) {
   const [courses, setCourses] = useState([]);
   useEffect(() => {
-    fetch(`/api/courses?categoryId=${categoryId}`)
+    fetch(`/api/get-course?categoryId=${categoryId}`)
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);

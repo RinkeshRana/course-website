@@ -226,6 +226,16 @@
         "Learn how to use SEO",
         "Learn how to use Digital Marketing Strategy"
       ]
+    },
+    {
+      "title": "Figma for Beginners 2022: Learning by Doing approach",
+      "shortDescription": "Figma is increasingly becoming the tool of choice for UI/UX Design teams all over the world. It is b",
+      "description": "Figma is increasingly becoming the tool of choice for UI/UX Design teams all over the world. It is because Figma is much more powerful than Adobe XD and Sketch when it comes to its capability to collaborate and develop responsive design. In this course, you will learn Figma while designing while you are learning. This learning by doing methodology will help you learn Figma more effectively.",
+      "learningPoints": ["Understand Figma and its functionality"],
+      "image": "https://cdn.domestika.org/c_fill,dpr_auto,f_auto,pg_1,t_base_params/v1612524030/course-covers/000/001/275/1275-original.jpg?1612524030",
+      "downloadLink": "https://mega.nz/folder/vtwRFIqS#LEmRLdzqVDXFfQ7bRWRSlw",
+      "categoryId": "2",
+      "slug": "figma-for-beginners-2022:-learning-by-doing-approach"
     }
   ]
 }

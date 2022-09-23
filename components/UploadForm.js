@@ -36,7 +36,7 @@ function UploadForm() {
       data.image &&
       data.downloadLink
     ) {
-      const res = await fetch("/api/uploadCourse", {
+      const res = await fetch("/api/add-course", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -60,7 +60,8 @@ export default async function handler(req, res) {
     try {
       var probe = require("probe-image-size");
       const { width, height } = await probe(image);
-      if (width < 1280 || height < 720) {
+      console.log(probe(image));
+      if (width < 700 || height < 720) {
         return res.status(400).json({
           message: "Image resolution should be at least 1280x720",
         });

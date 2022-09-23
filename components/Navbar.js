@@ -7,13 +7,12 @@ function NavBar() {
 
   const [searchInput, setSearchInput] = useState("");
   const [searchData, setSearchData] = useState();
-  const [route, setRoute] = useState("Home");
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       if (searchInput.length > 0) {
         console.log(searchInput);
-        fetch(`/api/searchCourse?course=${searchInput}`)
+        fetch(`/api/get-course?search=${searchInput}`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

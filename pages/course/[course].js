@@ -35,7 +35,7 @@ export default course;
 export async function getServerSideProps(context) {
   const courseName = context.query.course;
   const res = await fetch(
-    `http://${context.req.headers.host}/api/getCourse?slug=${courseName}`
+    `http://${context.req.headers.host}/api/get-course?slug=${courseName}`
   );
 
   // check if the course exists
