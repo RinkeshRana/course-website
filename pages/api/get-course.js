@@ -13,16 +13,17 @@ const handler = async (req, res) => {
     }
     return res.status(200).json(course);
   } else if (req.query.categoryId >= 0 && req.query.categoryId <= 2) {
-    let courses = [];
+    let filteredCourse = [];
     if (req.query.categoryId) {
       for (const item of course) {
         if (item.categoryId === req.query.categoryId) {
-          courses.push(item);
+          console.log(item.categoryId);
+          filteredCourse.push(item);
         }
       }
-      return res.status(200).json(courses);
+      return res.status(200).json(filteredCourse);
     }
-    return res.status(200).json(courses);
+    return res.status(200).json(course);
   } else if (req.query.search) {
     let courses = [];
     for (const item of course) {
