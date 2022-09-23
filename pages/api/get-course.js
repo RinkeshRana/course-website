@@ -17,7 +17,6 @@ const handler = async (req, res) => {
     if (req.query.categoryId) {
       for (const item of course) {
         if (item.categoryId === req.query.categoryId) {
-          console.log(item.categoryId);
           filteredCourse.push(item);
         }
       }

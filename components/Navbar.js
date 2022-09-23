@@ -129,7 +129,7 @@ function NavBar() {
             </button>
           </div>
           <div
-            className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
+            className="block justify-between items-center w-full md:flex md:w-auto md:order-1"
             id="navbar-search"
           >
             <div className="relative mt-3 md:hidden">
@@ -173,14 +173,14 @@ function NavBar() {
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href="/course">
                   <span
-                    className={`block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent tracking-wider uppercase dark:border-gray-700 cursor-pointer
-                  ${
-                    router.pathname === "/courses"
-                      ? "dark:text-white text-white md:text-blue-700 "
-                      : "text-gray-900 dark:text-gray-500"
-                  }
+                    className={`block py-2 pr-4 pl-3 text-gray-700 rounded  md:p-0 dark:text-gray-400 dark:hover:bg-gray-70 md:dark:hover:bg-transparent tracking-wider uppercase dark:border-gray-700 cursor-pointer
+                    ${
+                      router.pathname === "/course"
+                        ? " text-white md:text-blue-700 "
+                        : "text-gray-900 dark:text-gray-500"
+                    }
                   `}
                   >
                     All Courses
