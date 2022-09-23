@@ -37,10 +37,20 @@ export async function getServerSideProps(context) {
   const res = await fetch(
     `http://${context.req.headers.host}/api/getCourse?slug=${courseName}`
   );
-  const course = await res.json();
-  return {
-    props: {
-      course,
-    },
-  };
+
+  // check if the course exists
+  try {
+    const course = await res.json();
+    return {
+      props: {
+        course,
+      },
+    };
+  } catch (error) {
+    return {
+      redirect: {
+        destination: "/404",
+      },
+    };
+  }
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
@@ -6,6 +7,7 @@ function NavBar() {
 
   const [searchInput, setSearchInput] = useState("");
   const [searchData, setSearchData] = useState();
+  const [route, setRoute] = useState("Home");
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
@@ -24,36 +26,32 @@ function NavBar() {
   }, [searchInput]);
 
   return (
-    <div className="relative">
-      {searchData && (
-        <div
-          className="absolute top-16 right-44 bg-gray-900 dark:bg-white shadow-lg rounded-md w-1/5
-        + z-50"
-        >
-          <div className="p-2">
-            {searchData.map((course) => (
-              <div
-                key={course.slug}
-                className="flex flex-row items-center space-x-2 p-2 cursor-pointer dark:hover:bg-gray-200 hover:bg-gray-800 rounded-md"
-                onClick={() => {
-                  router.push(`/course/${course.slug}`);
-                  setSearchInput("");
-                  setSearchData(null);
-                }}
-              >
-                <div className="flex flex-col">
-                  <div className="dark:text-gray-900 text-gray-100 font-semibold">
-                    {course.title}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
+    <div>
       <div className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 shadow-md">
-        <div className="container flex flex-wrap justify-between items-center mx-auto">
+        <div className="container flex flex-wrap justify-between items-center mx-auto relative">
+          {searchData && (
+            <div className="absolute top-14 dark:bg-gray-800 bg-white shadow-lg rounded-md w-1/3 z-50 right-0 border-2 border-gray-700 ">
+              <div className="p-2">
+                {searchData.map((course) => (
+                  <div
+                    key={course.slug}
+                    className="flex flex-row items-center space-x-2 p-2 cursor-pointer hover:bg-gray-200 duration-150 hover:scale-105 dark:hover:bg-gray-700 rounded-md"
+                    onClick={() => {
+                      router.push(`/course/${course.slug}`);
+                      setSearchInput("");
+                      setSearchData(null);
+                    }}
+                  >
+                    <div className="flex flex-col">
+                      <div className="text-gray-900 dark:text-gray-300 font-semibold  hover:text-gray-200">
+                        {course.title}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
           <a onClick={() => router.push("/")} className="flex items-center">
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white uppercase tracking-wider">
               Courses Duniya
@@ -82,7 +80,7 @@ function NavBar() {
               </svg>
               <span className="sr-only">Search</span>
             </button>
-            <div className="hidden relative md:block">
+            <div className="hidden relative md:block s">
               <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                 <svg
                   className="w-5 h-5 text-gray-500"
@@ -162,30 +160,46 @@ function NavBar() {
             </div>
             <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white tracking-wider uppercase"
-                  aria-current="page"
-                  onClick={() => router.push("/")}
-                >
-                  Home
-                </a>
+                <Link href="/">
+                  <span
+                    className={`block py-2 pr-4 pl-3  bg-blue-700 rounded md:bg-transparent  md:p-0 tracking-wider uppercase cursor-pointer ${
+                      router.pathname === "/"
+                        ? "dark:text-white text-white md:text-blue-700 "
+                        : "text-gray-900 dark:text-gray-500"
+                    }`}
+                    aria-current="page"
+                  >
+                    Home
+                  </span>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent tracking-wider uppercase dark:border-gray-700"
-                >
-                  Categories
-                </a>
+                <Link href="#">
+                  <span
+                    className={`block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent tracking-wider uppercase dark:border-gray-700 cursor-pointer
+                  ${
+                    router.pathname === "/courses"
+                      ? "dark:text-white text-white md:text-blue-700 "
+                      : "text-gray-900 dark:text-gray-500"
+                  }
+                  `}
+                  >
+                    All Courses
+                  </span>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 tracking-wider uppercase dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Upload Course
-                </a>
+                <Link href="/upload">
+                  <span
+                    className={`block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 tracking-wider uppercase dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 cursor-pointer ${
+                      router.pathname === "/upload"
+                        ? "dark:text-white text-white md:text-blue-700 "
+                        : "text-gray-900 dark:text-gray-500"
+                    }`}
+                  >
+                    Upload Course
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>

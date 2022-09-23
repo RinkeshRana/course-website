@@ -25,7 +25,7 @@ function TopCourses({ title, description, categoryId }) {
         {courses &&
           courses.map((course) => (
             <CourseCard
-              key={course.id}
+              key={course.slug}
               slug={course.slug}
               title={course.title}
               shortDescription={course.shortDescription}
