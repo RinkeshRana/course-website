@@ -1,7 +1,13 @@
 import Courses from "../../models/Courses";
 import connectDB from "../../lib/mongoose";
+import { unstable_getServerSession } from "next-auth/next";
+import { authOptions } from "./auth/[...nextauth]";
 
 const handler = async (req, res) => {
+  const session = await unstable_getServerSession(req, res, authOptions);
+
+  if (!session) res.send({ error: "You must be signed." });
+
   if (req.method != "POST") {
     return res.status(500).json({ message: "Something went wrong" });
   }
