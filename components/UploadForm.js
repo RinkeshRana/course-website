@@ -9,7 +9,6 @@ function UploadForm() {
 
   const addObjective = () => {
     setObjectives(objectives + 1);
-    signOut();
   };
 
   const removeObjective = () => {
