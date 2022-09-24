@@ -4,7 +4,7 @@ import TopCourses from "../components/TopCourses";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Head>
         <title>
           Courses Duniya - Learn Programming, Web Development, Data Science,

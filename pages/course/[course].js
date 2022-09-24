@@ -6,7 +6,7 @@ import CourseHeader from "../../components/CourseHeader";
 
 function course({ course }) {
   return (
-    <div className=" bg-white dark:bg-gray-900 p-3">
+    <div className=" bg-white dark:bg-gray-900 p-3 min-h-screen">
       <Head>
         <title>{course.title}</title>
         <meta name="description" content={course.shortDescription} />
@@ -17,7 +17,7 @@ function course({ course }) {
         image={course.image}
         description={course.description}
       />
-      <div className="text-white text-xl md:text-3xl  font-bold tracking-widest mt-5 p-2 border-b border-dashed border-gray-600">
+      <div className="dark:text-white text-xl md:text-3xl  font-bold tracking-widest mt-5 p-2 border-b border-dashed border-gray-600">
         <CourseDetails learningPoints={course.learningPoints} />
       </div>
 

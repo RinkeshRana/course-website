@@ -10,7 +10,7 @@ function AllCourses() {
         console.log(courses);
         setLoading(false);
       });
-  }, []);
+  });
 
   const [loading, setLoading] = useState(true);
   const [courses, setCourses] = useState([]);
